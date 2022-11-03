@@ -83,9 +83,9 @@ const Footer = () => {
                     <Col lg='12'>
                         <p className="footer__copyright">Copyright {year} developed by Me. All rights reserved</p>
                     </Col>
-                </Row >
-            </Container >
-        </footer >
+                </Row>
+            </Container>
+        </footer>
     )
 }
 

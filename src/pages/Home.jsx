@@ -61,7 +61,7 @@ const Home = () => {
                                     Trending product in {year}
                                 </p>
                                 <h2>Make Your Interior More Minimalistic & Modern</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ab reiciendis unde possimus veniam earum distinctio amet cum officia doloremque.</p>
+                                <p>There's a reason why minimalism is having such a major moment in the design — when done right, it results in a clean, calming space without being boring. Minimalism calls for thoughtful curation and clutter-free spaces, both of which extend beyond the visual and actually result in more calming, livable, and nurturing environments.</p>
                                 <motion.button whileTap={{ scale: 1.1 }} className="buy__btn"><Link to='/shop'>SHOP NOW</Link> </motion.button>
                             </div>
                         </Col>

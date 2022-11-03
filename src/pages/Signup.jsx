@@ -13,6 +13,7 @@ import { toast } from 'react-toastify';
 
 
 import '../style/login.css'
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -22,6 +23,7 @@ const Signup = () => {
     const [file, setFile] = useState(null)
     const [loading, setLoading] = useState('false')
 
+    const navigate = useNavigate()
 
     const signup = async (e) => {
         e.preventDefault()
@@ -57,7 +59,12 @@ const Signup = () => {
             })
 
             console.log(user);
+            setLoading(false)
+            toast.success('account created')
+            navigate('/login')
         } catch (error) {
+            setLoading(false)
+
             toast.error('something went wrong')
         }
     }
@@ -67,6 +74,9 @@ const Signup = () => {
         <Helmet title="Signup">
             <Container>
                 <Row>
+                    {/* {loading ? (
+                        <Col lg='6' className='text-center'><h6 className='fw-bold'>Loading...</h6></Col>
+                    ) : ( */}
                     <Col lg='6' className='m-auto text-center my-5'>
                         <h3 className='fw-bold mb-4'>Signup</h3>
                         <Form className='auth__form' onSubmit={signup}>
@@ -98,6 +108,9 @@ const Signup = () => {
                             <p>Already have an account? <Link to='/login'>Login</Link>  </p>
                         </Form>
                     </Col>
+                    {/* )
+
+                    } */}
                 </Row>
             </Container>
         </Helmet>
